@@ -56,20 +56,3 @@ dl.py code from [here](https://github.com/tensorlayer/dcgan/blob/master/download
 # Result
 ![anime](./as/training_anime.gif)
 ### Images for each 500 step
-
-
-# Problem
-On average, if more than 20 epochs are exceeded, "mode collapse" is clearly displayed.
-
-Sometimes "mode collapse" occurs while learning, and if the D_loss falls below 1e-2 there is almost can not recovery... 
-
-At gif, you can see that the middle(step) image is sometimes worse.
-
-I'm trying to fix it. 
-
-## Things I've tried
-***
-
-1. Lower lr to 4e-5 and try 100 and Generator_model training twice, but "mode collapse" occurs between 60 and 70 of the epoch...
-
-2. just Generator_model training twice "mode collapse" occurs between 13~15....

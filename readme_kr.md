@@ -56,19 +56,3 @@ dl.py code from [here](https://github.com/tensorlayer/dcgan/blob/master/download
 # Result
 ![anime](./as/training_anime.gif)
 ### Images for each 500 step
-
-
-# Problem
-지금 값으로는 펴균 20 epoch 언저리에서 "모드붕괴" 현상이 확실하게... 일어납니다. ㅠ
-가끔 학습 중간 짧게 일어 났습니다. 학습중 D_loss 값이 1e-2 이하로 떨어져서 몇번 지나면 복구가 안될정도 였습니다.
-
-gif 파일을 보시면 학습중간 스텝에서 전부 노이즈가 되었다가 다시 돌아오는걸 확인할수 있습니다.
-
-고쳐보려고 하는데 뭐가 문제인지를 모르고 있습니다... 
-
-## Things I've tried
-***
-
-1. 학습률을  4e-5 으로 줄이고 epoch을 100으로 주고 학습을 시도해 봤는데 60~70 중간에 또 모드붕괴 현상이 일어나는걸 확인했습니다. (3번 돌렸는데 2번은 60 , 1번은 68-69 쯤에서 붕괴되어 버려서 로스값이 쭉 올라가버립니다.)
-
-2. Generator_model 을 2번 학습 시키는 방법으로 3번 학습을 시켜봤는데 역시 13~15 사이에서 붕괴되는걸 확인했습니다...
